@@ -1,0 +1,33 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
+.social {
+  display: flex;
+  gap: 16px;
+}
+
+.social-item {
+  --color: var(--primary);
+  --color-h: var(--primary-h);
+
+  width: 24px;
+  height: 24px;
+  color: var(--color);
+
+  transition: color .3s ease;
+
+  @include hover {
+    color: var(--color-h);
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &._mob {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+}

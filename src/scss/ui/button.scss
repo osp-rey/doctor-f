@@ -1,0 +1,68 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.btn-s {
+  --background: var(--primary);
+  --background-h: var(--primray-h);
+  --color: white;
+  --color-h: white;
+  --border: var(--primary);
+  --border-h: var(--primray-h);
+
+  @include flex-center;
+  cursor: pointer;
+  padding: 12px 35px;
+  outline: none;
+  border-radius: 10px;
+  min-height: 68px;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  width: fit-content;
+  gap: 15px;
+
+  text-align: center;
+  color: var(--color);
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+
+  @include tablet {
+    min-height: 52px;
+  }
+  @include hover {
+    color: var(--color-h);
+    background-color: var(--background-h);
+    border-color: var(--border-h);
+  }
+
+  .icon-play {
+    width: 40px;
+    height: 40px;
+
+    @include laptop-min {
+      width: 35px;
+      height: 35px;
+    }
+    @include tablet {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &._blur {
+    --background: rgba(0, 0, 0, 0.2);
+    --background-h: rgba(0, 0, 0, 0.4);
+    --color: white;
+    --color-h: white;
+    --border: transparent;
+    --border-h: transparent;
+
+    backdrop-filter: blur(15px);
+  }
+}
