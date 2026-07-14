@@ -1,0 +1,12 @@
+.s-team {
+  &__slider {
+    .swiper-slide {
+      box-sizing: border-box;
+      height: auto !important;
+
+      .card-team {
+        height: 100%;
+      }
+    }
+  }
+}

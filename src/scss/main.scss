@@ -15,6 +15,12 @@
 @use "./ui/content-box";
 @use "./ui/slider";
 @use "./ui/form";
+@use "./ui/sect";
+@use "./ui/tag";
+@use "./ui/tabs-nav";
+@use "./ui/card-service";
+@use "./ui/card-promo";
+@use "./ui/card-team";
 
 @use "./components/header";
 @use "./components/service-drop";
@@ -22,5 +28,9 @@
 @use "./components/modal";
 
 @use "./components/s-hero";
+
+@use "./components/s-services";
+@use "./components/s-promo";
+@use "./components/s-team";
 
 @use "./components/footer";

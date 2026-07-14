@@ -1,0 +1,25 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+.s-promo {
+  &__slider {
+    .swiper-slide {
+      box-sizing: border-box;
+      height: auto !important;
+  
+      .card-promo {
+        height: 100%;
+      }
+    }
+  }
+  &__btn-more {
+    width: 350px;
+    max-width: 100%;
+    margin: 25px auto 0px auto;
+    @media (min-width: 1025px) {
+      display: none;
+    }
+    @include tablet-min {
+      width: 100%;
+    }
+  }
+}

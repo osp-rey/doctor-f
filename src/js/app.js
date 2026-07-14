@@ -1,11 +1,17 @@
 import burger from "./functions/burger.js";
+import buttonsNote from "./functions/buttonsNote.js";
+import changeModaltitle from "./functions/changeModalTitle.js";
 import servicesDrop from "./functions/servicesDrop.js";
 import sliders from "./functions/sliders.js";
+import tab from "./functions/tab.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   servicesDrop();
   burger();
   sliders();
+  tab();
+  buttonsNote();
+  changeModaltitle()
 
   Fancybox.bind("[data-fancybox]", {
     closeButton: false,
@@ -24,5 +30,5 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
-  Fancybox.show([{src: "#modal-feedback", type: "inline"}], {closeButton: false})
+  // Fancybox.show([{src: "#modal-feedback", type: "inline"}], {closeButton: false})
 });

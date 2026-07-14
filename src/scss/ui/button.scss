@@ -115,3 +115,16 @@
     height: 14px;
   }
 }
+
+.btn-simple {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--prmary);
+  text-underline-offset: 2px;
+  width: fit-content;
+  color: var(--primary);
+
+  @include hover {
+    text-decoration: none;
+  }
+}

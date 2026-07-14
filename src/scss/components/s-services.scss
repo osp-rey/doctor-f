@@ -1,0 +1,49 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-services {
+  overflow: hidden;
+  &__slider {
+    @include laptop-middle {
+      overflow: visible !important;
+    }
+    .swiper-wrapper {
+      @media (min-width: 1200px) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+    }
+  }
+  &__slide {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    @include laptop-middle {
+      gap: 15px;
+      width: 420px !important;
+      max-width: 100%;
+    }
+    @include tablet {
+      gap: 10px;
+    }
+    @include tablet-min {
+      width: 220px !important;
+    }
+  }
+  &__btn-more {
+    margin: 45px auto 0px auto;
+    width: 300px;
+    max-width: 100%;
+    @include laptop-min {
+      margin-top: 35px;
+    }
+    @include tablet {
+      margin-top: 25px;
+    }
+    @include tablet-min {
+      width: 100%;
+    }
+  }
+}

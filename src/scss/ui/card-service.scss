@@ -1,0 +1,51 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.card-service {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 30px;
+  background-color: var(--ghost);
+  border: 1px solid var(--ghost);
+  min-height: 200px;
+
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+
+  @include tablet {
+    border-radius: 12px;
+  }
+  @include tablet-min {
+    min-height: 170px;
+  }
+  @include hover {
+    background-color: var(--cloud);
+    border-color: var(--primary);
+
+    .card-service__arrow {
+      transform: rotate(45deg);
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 22px;
+    @include laptop-middle {
+      font-size: 20px;
+    }
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+  &__arrow {
+    width: 16px;
+    height: 16px;
+    margin-top: auto;
+
+    color: var(--primary);
+
+    transition: transform 0.3s ease;
+  }
+}
