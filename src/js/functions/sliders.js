@@ -133,8 +133,8 @@ export default function sliders() {
   if (teamSlider) {
     const swiper = new Swiper(teamSlider, {
       speed: 900,
-      spaceBetween: 20,
-      slidesPerView: 3,
+      spaceBetween: 10,
+      slidesPerView: 2,
       // autoplay: {
       //   delay: 6000
       // },
@@ -142,10 +142,18 @@ export default function sliders() {
         prevEl: ".s-team .slider-arrow._prev",
         nextEl: ".s-team .slider-arrow._next",
       },
+      pagination: {
+        el: ".s-team .slider-pagination",
+        clickable: true,
+      },
       breakpoints: {
-        1025: {
+        1200: {
           spaceBetween: 20,
           slidesPerView: 4,
+        },
+        768: {
+          spaceBetween: 15,
+          slidesPerView: 3,
         },
       },
     });

@@ -1,0 +1,79 @@
+<section class="sect-m s-connect">
+  <div class="container s-connect__container">
+    <div class="s-connect__wrap">
+      <div class="s-connect__body">
+        <div class="s-connect__body-bg"></div>
+        <div class="s-connect__body-container">
+          <h2 class="s-title s-connect__title">Запишитесь на прием</h2>
+          <div class="content-box s-connect__content">
+            <p>Оставьте заявку и мы свяжемся с Вами в ближайшее время</p>
+          </div>
+          <div data-services-options="Услуга 1,Услуга 2,Услуга 3">
+            <form action="#" class="s-connect__form">
+              <div class="form-grid">
+                <div class="form-control">
+                  <input type="text" placeholder="Ваше имя" class="input" />
+                </div>
+                <div class="form-control">
+                  <input
+                    type="tel"
+                    placeholder="+7 (___) ___-__-__"
+                    class="input"
+                  />
+                </div>
+                <div class="form-control">
+                  <div class="select" data-target-options="services">
+                    <div class="select-btn">
+                      <input
+                        type="text"
+                        readonly
+                        placeholder="Выберите услугу"
+                        class="input select-input"
+                      />
+                      <svg class="select-arrow">
+                        <use xlink:href="img/icons/icons.svg#icon-down"></use>
+                      </svg>
+                    </div>
+                    <div class="select-body">
+                      <div class="select-body-wrap"></div>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn-s">Оставить заявку</button>
+              </div>
+              <div class="check-wrapper">
+                <span class="wpcf7-form-control-wrap" data-name="acceptance-297">
+                  <span class="wpcf7-form-control wpcf7-acceptance">
+                    <span class="wpcf7-list-item">
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="acceptance-297"
+                          value="1"
+                          aria-invalid="false"
+                        />
+                        <span class="wpcf7-list-item-label">
+                          <span>
+                            Я даю
+                            <a href="/consent-processing" target="_blank">
+                              Согласие на обработку
+                            </a>
+                            указанных мной персональных данных в соответствии с
+                            <a href="/personal-data" target="_blank">
+                              Политикой обработки персональных данных
+                            </a>
+                          </span>
+                        </span>
+                      </label>
+                    </span>
+                  </span>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <img src="@img/connect.jpg" alt="image" class="s-connect__img" />
+    </div>
+  </div>
+</section>

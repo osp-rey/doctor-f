@@ -14,6 +14,10 @@
     padding: 20px 20px 10px 20px;
     z-index: 1;
 
+    @include tablet {
+      padding: 10px;
+    }
+
     &::before,
     &::after {
       position: absolute;
@@ -50,6 +54,9 @@
     @include laptop {
       font-size: 22px;
     }
+    @include laptop-min {
+      font-size: 18px;
+    }
     @include tablet-min {
       font-size: 16px;
     }
@@ -63,12 +70,23 @@
 
     font-weight: 500;
     font-size: 15px;
+
+    @include tablet {
+      font-size: 13px;
+    }
   }
   &__content {
     font-size: 16px;
     line-height: 150%;
     margin: 10px 0px 0px 0px;
     opacity: 0.7;
+    @include tablet {
+      font-size: 15px;
+    }
+    @include tablet-min {
+      font-size: 13px;
+      line-height: 150%;
+    }
   }
   &__btn-more {
     margin: 15px 0px;
@@ -77,5 +95,7 @@
     width: 100%;
     margin-top: auto;
     min-height: 60px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }

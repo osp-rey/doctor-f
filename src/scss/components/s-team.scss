@@ -1,3 +1,6 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
 .s-team {
   &__slider {
     .swiper-slide {
@@ -7,6 +10,17 @@
       .card-team {
         height: 100%;
       }
+    }
+  }
+  &__btn-more {
+    max-width: 100%;
+    width: 300px;
+    margin: 25px auto 0px auto;
+    @media (min-width: 1025px) {
+      display: none;
+    }
+    @include tablet-min {
+      width: 100%;
     }
   }
 }

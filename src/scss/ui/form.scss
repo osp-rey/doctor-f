@@ -51,6 +51,7 @@
 
   @include tablet {
     min-height: 52px;
+    border-radius: 6px;
     padding: 16px 28px;
   }
   @include hover {
@@ -129,6 +130,10 @@
     font-size: 14px;
     color: var(--color);
 
+    @include tablet {
+      font-size: 12px;
+    }
+
     &::before {
       content: "";
       flex-shrink: 0;
@@ -147,6 +152,8 @@
       text-decoration: underline;
       text-underline-offset: 2px;
 
+      transition: color .3s ease;
+
       @include hover {
         color: var(--color-h);
       }
@@ -154,5 +161,97 @@
   }
   .wpcf7-list-item {
     margin-left: 0;
+  }
+}
+
+.select {
+  position: relative;
+  width: 100%;
+
+  &._open {
+    .select-btn {
+      .select-arrow {
+        transform: rotate(180deg);
+      }
+    }
+    .select-body {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+}
+.select-btn {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  .select-arrow {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 30px;
+    transition: transform 0.3s ease;
+  }
+}
+.select-input {
+  pointer-events: none;
+  padding-right: 60px;
+}
+.select-body {
+  position: absolute;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: auto;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  overflow: hidden;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease;
+}
+.select-body-wrap {
+  max-height: 260px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 10px;
+  }
+}
+.select-item {
+  width: 100%;
+  cursor: pointer;
+  padding: 12px 35px;
+
+  user-select: none;
+
+  transition: background-color .3s ease, color .3s ease;
+
+  @include tablet {
+    padding: 12px 28px;
+  }
+  @include hover {
+    background-color: var(--ghost);
+  }
+  &._active {
+    pointer-events: none;
+    background-color: var(--ghost);
   }
 }

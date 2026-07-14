@@ -1,6 +1,8 @@
 import burger from "./functions/burger.js";
 import buttonsNote from "./functions/buttonsNote.js";
 import changeModaltitle from "./functions/changeModalTitle.js";
+import handlerSelect from "./functions/handlerSelect.js";
+import inputmask from "./functions/inputmask.js";
 import servicesDrop from "./functions/servicesDrop.js";
 import sliders from "./functions/sliders.js";
 import tab from "./functions/tab.js";
@@ -11,7 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
   sliders();
   tab();
   buttonsNote();
-  changeModaltitle()
+  changeModaltitle();
+  inputmask();
+  handlerSelect();
 
   Fancybox.bind("[data-fancybox]", {
     closeButton: false,
