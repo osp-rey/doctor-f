@@ -1,0 +1,64 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.modal {
+  display: none;
+  width: 600px;
+  max-width: 100%;
+  padding: 50px 30px 30px 30px;
+  border-radius: 20px;
+  background-color: var(--ghost);
+  cursor: auto;
+
+  @include tablet {
+    padding: 50px 20px 20px 20px;
+  }
+
+  &__body {
+    width: 100%;
+  }
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  &__head {
+    text-align: center;
+  }
+  &__title {
+    margin: 0;
+    font-weight: 400;
+    font-size: 34px;
+
+    @include laptop-min {
+      font-size: 30px;
+    }
+    @include tablet {
+      font-size: 26px;
+    }
+  }
+  &__content {
+    font-size: 16px;
+    margin: 20px 0px 0px 0px;
+    opacity: 0.7;
+    @include tablet {
+      font-size: 15px;
+    }
+  }
+  &__form {
+    margin-top: 30px;
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+
+      @include tablet {
+        gap: 15px;
+      }
+
+      .btn-s {
+        width: 100%;
+      }
+    }
+  }
+}

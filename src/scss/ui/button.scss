@@ -3,11 +3,11 @@
 
 .btn-s {
   --background: var(--primary);
-  --background-h: var(--primray-h);
+  --background-h: var(--primary-h);
   --color: white;
   --color-h: white;
   --border: var(--primary);
-  --border-h: var(--primray-h);
+  --border-h: var(--primary-h);
 
   @include flex-center;
   cursor: pointer;
@@ -20,6 +20,7 @@
   width: fit-content;
   gap: 15px;
 
+  user-select: none;
   text-align: center;
   color: var(--color);
 
@@ -30,6 +31,7 @@
 
   @include tablet {
     min-height: 52px;
+    border-radius: 6px;
   }
   @include hover {
     color: var(--color-h);
@@ -64,5 +66,52 @@
     --border-h: transparent;
 
     backdrop-filter: blur(15px);
+  }
+  &._white {
+    --background: white;
+    --background-h: var(--ghost);
+    --color: var(--black);
+    --color-h: var(--black);
+    --border: white;
+    --border-h: var(--ghost);
+
+    svg {
+      color: var(--primary);
+    }
+  }
+}
+
+.btn-r {
+  --background: var(--primary);
+  --background-h: var(--primary-h);
+  --color: white;
+  --color-h: white;
+  --border: var(--primary);
+  --border-h: var(--primary-h);
+
+  @include flex-center;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+
+  color: var(--color);
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+
+  @include hover {
+    background-color: var(--background-h);
+    border-color: var(--border-h);
+    color: var(--color-h);
+  }
+
+  svg {
+    width: 14px;
+    height: 14px;
   }
 }

@@ -14,10 +14,12 @@
 @use "./ui/social";
 @use "./ui/content-box";
 @use "./ui/slider";
+@use "./ui/form";
 
 @use "./components/header";
 @use "./components/service-drop";
 @use "./components/burger";
+@use "./components/modal";
 
 @use "./components/s-hero";
 

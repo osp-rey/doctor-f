@@ -1,0 +1,59 @@
+<aside>
+  <div class="modal" id="modal-feedback">
+    <div class="modal__body">
+      <div data-fancybox-close class="modal__close btn-r">
+        <svg>
+          <use xlink:href="img/icons/icons.svg#icon-close"></use>
+        </svg>
+      </div>
+      <div class="modal__head">
+        <div class="modal__title s-title" data-text="Оставить заявку">
+          Оставить заявку
+        </div>
+        <p class="modal__content">
+          Заполните форму и мы свяжемся с Вами в ближайшее время
+        </p>
+      </div>
+      <form action="#" class="modal__form">
+        <div class="form-grid">
+          <div style="display: none;">
+            <input type="text" class="input-note">
+          </div>
+          <div class="form-control">
+            <input type="text" placeholder="Ваше имя" class="input" />
+          </div>
+          <div class="form-control">
+            <input type="tel" placeholder="+7 (___) ___-__-__" class="input" />
+          </div>
+          <button type="submit" class="btn-s">Оставить заявку</button>
+          <div class="check-wrapper">
+            <span class="wpcf7-form-control-wrap" data-name="acceptance-297">
+              <span class="wpcf7-form-control wpcf7-acceptance">
+                <span class="wpcf7-list-item">
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="acceptance-297"
+                      value="1"
+                      aria-invalid="false"
+                    />
+                    <span class="wpcf7-list-item-label">
+                      <span>
+                        Я даю
+                        <a href="/consent-processing" target="_blank">
+                          Согласие на обработку
+                        </a>
+                        указанных мной персональных данных в соответствии с
+                        <a href="/personal-data" target="_blank">Политикой обработки персональных данных</a>
+                      </span>
+                    </span>
+                  </label>
+                </span>
+              </span>
+            </span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</aside>

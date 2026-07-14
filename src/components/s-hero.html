@@ -4,13 +4,22 @@
       <div class="swiper s-hero__bg-slider">
         <div class="swiper-wrapper">
           <div class="swiper-slide s-hero__bg-slide">
-            <img src="@img/hero.jpg" alt="image" />
+            <picture>
+              <source srcset="@img/hero-mob.jpg" media="(max-width: 767px)">
+              <img src="@img/hero.jpg" alt="image" />
+            </picture>
           </div>
           <div class="swiper-slide s-hero__bg-slide">
-            <img src="@img/hero.jpg" alt="image" />
+            <picture>
+              <source srcset="@img/hero-mob.jpg" media="(max-width: 767px)">
+              <img src="@img/hero.jpg" alt="image" />
+            </picture>
           </div>
           <div class="swiper-slide s-hero__bg-slide">
-            <img src="@img/hero.jpg" alt="image" />
+            <picture>
+              <source srcset="@img/hero-mob.jpg" media="(max-width: 767px)">
+              <img src="@img/hero.jpg" alt="image" />
+            </picture>
           </div>
         </div>
       </div>
@@ -87,27 +96,28 @@
         <div class="s-hero__nav">
           <div class="s-hero__nav-buttons">
             <a href="#modal-feedback" data-fancybox class="btn-s">Записаться на прием</a>
-            <a href="#modal-feedback" data-fancybox class="btn-s _white">
-              <span>Записаться на прием</span>
+            <a href="#" target="_blank" rel="nofollow" class="btn-s _white">
+              <span>Написать в МАХ</span>
               <svg class="icon">
                 <use xlink:href='img/icons/icons.svg#icon-max'></use>
               </svg>
             </a>
           </div>
           <div class="slider-nav">
-            <div class="slider-arrow _prev">
+            <div class="slider-arrow _prev _blur">
               <svg>
                 <use xlink:href='img/icons/icons.svg#icon-prev'></use>
               </svg>
             </div>
-            <div class="slider-arrow _next">
+            <div class="slider-arrow _next _blur">
               <svg>
-                <use xlink:href='img/icons/icons.svg#icon-prev'></use>
+                <use xlink:href='img/icons/icons.svg#icon-next'></use>
               </svg>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="slider-progress s-hero__slider-progress"></div>
   </div>
 </section>
