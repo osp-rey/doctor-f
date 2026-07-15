@@ -21,6 +21,7 @@
 @use "./ui/card-service";
 @use "./ui/card-promo";
 @use "./ui/card-team";
+@use "./ui/breadcrumbs";
 
 @use "./components/header";
 @use "./components/service-drop";
@@ -36,5 +37,6 @@
 @use "./components/s-about";
 @use "./components/s-reviews";
 @use "./components/s-contacts";
+@use "./components/s-archive-services";
 
 @use "./components/footer";

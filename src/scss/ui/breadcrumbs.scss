@@ -1,0 +1,48 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.breadcrumbs {
+  margin: 10px 0px 25px 0px;
+
+  & + .sect-m {
+    margin-top: 0 !important;
+  }
+
+  .aioseo-breadcrumbs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .aioseo-breadcrumb {
+    --color: var(--primary);
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 14px;
+    color: var(--color);
+
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        display: block;
+        flex-shrink: 0;
+        width: 4px;
+        height: 4px;
+        background-color: var(--color);
+        border-radius: 50%;
+      }
+    }
+
+    a {
+      transition: color 0.3s ease;
+      @include hover {
+        color: var(--primary-h);
+      }
+    }
+  }
+  .aioseo-breadcrumb-separator {
+    display: none;
+  }
+}
