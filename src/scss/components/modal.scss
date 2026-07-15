@@ -1,6 +1,9 @@
 @use "../base/templates" as *;
 @use "../base/media" as *;
 
+.fancybox__backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
 .modal {
   display: none;
   width: 600px;

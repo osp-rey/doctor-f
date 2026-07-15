@@ -7,6 +7,9 @@
   padding: 28px 0px;
   background-color: white;
   z-index: 120;
+
+  transition: transform .4s ease;
+
   @include laptop {
     padding: 20px 0px;
   }
@@ -19,6 +22,11 @@
   @include tablet-min {
     padding: 8px 0px;
   }
+
+  &._hide {
+    transform: translateY(-100%)
+  }
+
   &__wrap {
     display: flex;
     align-items: center;

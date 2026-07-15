@@ -2,8 +2,10 @@ import burger from "./functions/burger.js";
 import buttonsNote from "./functions/buttonsNote.js";
 import changeModaltitle from "./functions/changeModalTitle.js";
 import handlerSelect from "./functions/handlerSelect.js";
+import headerScroll from "./functions/headerScroll.js";
 import inputmask from "./functions/inputmask.js";
 import map from "./functions/maps.js";
+import more from "./functions/more.js";
 import servicesDrop from "./functions/servicesDrop.js";
 import sliders from "./functions/sliders.js";
 import tab from "./functions/tab.js";
@@ -18,6 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
   inputmask();
   handlerSelect();
   map();
+  more();
+  headerScroll();
 
   Fancybox.bind("[data-fancybox]", {
     closeButton: false,

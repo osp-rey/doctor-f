@@ -15,6 +15,7 @@
   }
   .aioseo-breadcrumb {
     --color: var(--primary);
+    --color-h: var(--primary-h);
 
     display: flex;
     align-items: center;
@@ -38,7 +39,7 @@
     a {
       transition: color 0.3s ease;
       @include hover {
-        color: var(--primary-h);
+        color: var(--color-h);
       }
     }
   }

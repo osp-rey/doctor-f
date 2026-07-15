@@ -79,6 +79,14 @@
       color: var(--primary);
     }
   }
+  &._outline {
+    --background: transparent;
+    --background-h: var(--primary-h);
+    --color: var(--primary);
+    --color-h: white;
+    --border: var(--primary);
+    --border-h: var(--primary-h);
+  }
 }
 
 .btn-r {
