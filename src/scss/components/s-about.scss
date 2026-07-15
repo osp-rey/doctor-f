@@ -1,0 +1,50 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
+.s-about {
+  overflow: hidden;
+  &__slider {
+    overflow: visible !important;
+  }
+  &__slide {
+    width: 450px !important;
+    height: 450px !important;
+    max-width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    &:first-child {
+      width: 675px !important;
+    }
+
+    @include laptop-middle {
+      width: 380px !important;
+      height: 380px !important;
+      &:first-child {
+        width: 565px !important;
+      }
+    }
+    @include tablet {
+      border-radius: 12px;
+      width: 340px !important;
+      height: 340px !important;
+      &:first-child {
+        width: 340px !important;
+      }
+    }
+
+    @include hover {
+      img {
+        transform: scale(1.08);
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      transition: transform .3s linear;
+    }
+  }
+}

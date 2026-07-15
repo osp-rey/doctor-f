@@ -135,9 +135,9 @@ export default function sliders() {
       speed: 900,
       spaceBetween: 10,
       slidesPerView: 2,
-      // autoplay: {
-      //   delay: 6000
-      // },
+      autoplay: {
+        delay: 6000,
+      },
       navigation: {
         prevEl: ".s-team .slider-arrow._prev",
         nextEl: ".s-team .slider-arrow._next",
@@ -154,6 +154,33 @@ export default function sliders() {
         768: {
           spaceBetween: 15,
           slidesPerView: 3,
+        },
+      },
+    });
+  }
+
+  const aboutSlider = document.querySelector(".s-about__slider");
+
+  if (aboutSlider) {
+    const swiper = new Swiper(aboutSlider, {
+      speed: 900,
+      spaceBetween: 15,
+      slidesPerView: "auto",
+      autoplay: {
+        delay: 6500,
+      },
+      navigation: {
+        prevEl: ".s-about .slider-arrow._prev",
+        nextEl: ".s-about .slider-arrow._next",
+      },
+      pagination: {
+        el: ".s-about .slider-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        768: {
+          spaceBetween: 20,
+          slidesPerView: "auto",
         },
       },
     });

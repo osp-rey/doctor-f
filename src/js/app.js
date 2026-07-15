@@ -3,6 +3,7 @@ import buttonsNote from "./functions/buttonsNote.js";
 import changeModaltitle from "./functions/changeModalTitle.js";
 import handlerSelect from "./functions/handlerSelect.js";
 import inputmask from "./functions/inputmask.js";
+import map from "./functions/maps.js";
 import servicesDrop from "./functions/servicesDrop.js";
 import sliders from "./functions/sliders.js";
 import tab from "./functions/tab.js";
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   changeModaltitle();
   inputmask();
   handlerSelect();
+  map();
 
   Fancybox.bind("[data-fancybox]", {
     closeButton: false,
