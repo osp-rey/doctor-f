@@ -37,10 +37,10 @@ export default function sliders() {
       },
     });
   }
-  const tabsNav = document.querySelectorAll(".tabs-nav");
+  const sectNavs = document.querySelectorAll(".sect-nav");
 
-  if (tabsNav.length) {
-    tabsNav.forEach((nav) => {
+  if (sectNavs.length) {
+    sectNavs.forEach((nav) => {
       const swiper = new Swiper(nav, {
         speed: 900,
         spaceBetween: 20,

@@ -1,7 +1,7 @@
 @use "../base/templates" as *;
 @use "../base/media" as *;
 
-.tabs-nav {
+.sect-nav {
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 45px;
@@ -48,7 +48,7 @@
       visibility 0.3s ease;
   }
 }
-.tabs-nav-btn {
+.sect-nav-btn {
   box-sizing: border-box;
   cursor: pointer;
   font-size: 22px;

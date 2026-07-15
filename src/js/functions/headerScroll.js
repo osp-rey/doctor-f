@@ -6,8 +6,6 @@ export default function headerScroll() {
 
     window.addEventListener("scroll", changeScroll);
 
-    changeScroll();
-
     function changeScroll() {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   

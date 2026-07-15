@@ -1,0 +1,129 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-something {
+  &__wrap {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 30px;
+    @include tablet {
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+  }
+  &__tabs {
+    margin-top: 45px;
+    @include laptop-min {
+      margin-top: 25px;
+    }
+  }
+  &__tabs-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    @include tablet {
+      margin-bottom: 15px;
+      gap: 10px
+    }
+  }
+  &__tab-btn {
+    @include flex-center;
+    cursor: pointer;
+    padding: 14px 25px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    font-weight: 500;
+    font-size: 22px;
+    text-align: center;
+    user-select: none;
+
+    transition:
+      border-color 0.3s ease,
+      background-color 0.3s ease,
+      color 0.3s ease;
+
+    &._active {
+      background: var(--primary);
+      border-color: var(--primary);
+      pointer-events: none;
+      color: white;
+    }
+    @include laptop-min {
+      font-size: 18px;
+    }
+    @include tablet {
+      padding: 12px 20px;
+      border-radius: 6px;
+    }
+    @include hover {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: white;
+    }
+  }
+  &__info {
+    flex: 0 1 1100px;
+    @include tablet {
+      flex: auto;
+      width: 100%;
+    }
+  }
+  &__tab-content {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  &__gallery {
+    position: sticky;
+    top: 80px;
+    width: 600px;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+
+    @include desktop {
+      width: 500px;
+    }
+    @include laptop-middle {
+      width: 400px;
+    }
+    @include laptop-min {
+      width: 300px;
+    }
+    @include tablet {
+      position: static;
+      width: 600px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+  &__gallery-inside {
+    border-radius: 20px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background: rgba(197, 143, 103, 0.1);
+      z-index: -1;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      z-index: -2;
+    }
+  }
+}
