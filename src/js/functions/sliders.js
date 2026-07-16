@@ -186,6 +186,37 @@ export default function sliders() {
     });
   }
 
+  const advSlider = document.querySelector(".s-adv__slider");
+
+  if (advSlider) {
+    const swiper = new Swiper(advSlider, {
+      speed: 900,
+      slidesPerView: "auto",
+      spaceBetween: 10,
+      autoplay: {
+        delay: 6500,
+      },
+      navigation: {
+        prevEl: ".s-adv .slider-arrow._prev",
+        nextEl: ".s-adv .slider-arrow._next",
+      },
+      breakpoints: {
+        1366: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+        1025: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: "auto",
+          spaceBetween: 15,
+        },
+      },
+    });
+  }
+
   function initSliderProgress(sliderProgress, count, activeIndex) {
     for (let i = 0; i < count; i++) {
       const item = document.createElement("span");
