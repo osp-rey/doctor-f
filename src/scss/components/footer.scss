@@ -24,6 +24,13 @@
     @include tablet {
       gap: 25px;
     }
+    @include tablet-min {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      text-align: center;
+    }
   }
   &__logo-mob {
     display: block;
@@ -47,6 +54,11 @@
       width: 100%;
       padding-top: 25px;
       border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    @include tablet-min {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     }
   }
   &__logo {
@@ -93,7 +105,9 @@
       row-gap: 25px;
     }
     @include tablet-min {
-      grid-template-columns: 1fr;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     }
   }
   &__nav-col {
@@ -138,6 +152,11 @@
       margin-left: 0;
       width: 100%;
     }
+    @include tablet-min {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
   }
   &__contacts-wrap {
     display: flex;
@@ -145,6 +164,11 @@
     gap: 20px;
     @include tablet {
       gap: 15px;
+    }
+    @include tablet-min {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     }
   }
   &__tel {
@@ -203,12 +227,13 @@
 
     font-size: 12px;
 
-    @include tablet  {
+    @include tablet {
       gap: 10px;
     }
     @include tablet-min {
       flex-direction: column;
-      align-items: start;
+      align-items: center;
+      text-align: center;
     }
 
     li {
@@ -235,7 +260,7 @@
 
       img {
         opacity: 0.7;
-        transition: opacity .3s ease;
+        transition: opacity 0.3s ease;
       }
     }
   }
