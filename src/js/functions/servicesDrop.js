@@ -7,6 +7,7 @@ export default function servicesDrop() {
     const headerZIndex = window.getComputedStyle(header).zIndex;
     const dropOverlay = document.querySelector("#services-drop-overlay");
     const btnToggle = document.querySelector("#services-drop-btn");
+    let isDisabledScroll = false;
 
     document.body.addEventListener("click", handlerClose);
 
@@ -28,6 +29,8 @@ export default function servicesDrop() {
       drop.classList.add("_open");
       btnToggle.classList.add("_active");
       header.style.zIndex = "999";
+      header.classList.add("_active")
+      isDisabledScroll = true;
 
       changeHeight();
     }
@@ -36,6 +39,8 @@ export default function servicesDrop() {
       drop.classList.remove("_open");
       btnToggle.classList.remove("_active");
       header.style.zIndex = headerZIndex;
+      header.classList.remove("_active")
+      isDisabledScroll = false;
     }
 
     function changeHeight() {
@@ -45,5 +50,16 @@ export default function servicesDrop() {
 
     window.visualViewport.addEventListener("resize", changeHeight);
     window.visualViewport.addEventListener("scroll", changeHeight);
+
+    function handlerDisabledScroll(e) {
+      if (isDisabledScroll) {
+        e.preventDefault();
+        return false;
+      }
+    }
+
+    document.addEventListener("wheel", handlerDisabledScroll, { passive: false });
+    document.addEventListener("touchmove", handlerDisabledScroll, { passive: false });
+    document.addEventListener("keydown", handlerDisabledScroll);
   }
 }

@@ -26,6 +26,9 @@
   &._hide {
     transform: translateY(-100%)
   }
+  &._active {
+    transform: translateY(0) !important;
+  }
 
   &__wrap {
     display: flex;
@@ -141,6 +144,7 @@
     }
   }
   &__social {
+    flex-wrap: nowrap !important;
     @include laptop-middle {
       display: none;
     }
@@ -192,6 +196,7 @@
     height: 40px;
     border-radius: 50%;
     background-color: var(--primary);
+    flex-shrink: 0;
     color: var(--ghost);
 
     transition: background-color 0.3s ease;

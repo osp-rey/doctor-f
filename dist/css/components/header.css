@@ -11,6 +11,10 @@
   transform: translateY(-100%);
 }
 
+.header._active {
+  transform: translateY(0) !important;
+}
+
 .header__wrap {
   display: flex;
   align-items: center;
@@ -72,6 +76,10 @@
   margin-left: auto;
 }
 
+.header__social {
+  flex-wrap: nowrap !important;
+}
+
 .header__contacts-main {
   display: flex;
   flex-direction: column;
@@ -97,6 +105,7 @@
   height: 40px;
   border-radius: 50%;
   background-color: var(--primary);
+  flex-shrink: 0;
   color: var(--ghost);
   transition: background-color 0.3s ease;
 }

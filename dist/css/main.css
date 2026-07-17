@@ -1148,7 +1148,7 @@ img {
 
 .sect-nav-toggle {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   z-index: 10;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
@@ -1458,6 +1458,10 @@ img {
   transform: translateY(-100%);
 }
 
+.header._active {
+  transform: translateY(0) !important;
+}
+
 .header__wrap {
   display: flex;
   align-items: center;
@@ -1519,6 +1523,10 @@ img {
   margin-left: auto;
 }
 
+.header__social {
+  flex-wrap: nowrap !important;
+}
+
 .header__contacts-main {
   display: flex;
   flex-direction: column;
@@ -1544,6 +1552,7 @@ img {
   height: 40px;
   border-radius: 50%;
   background-color: var(--primary);
+  flex-shrink: 0;
   color: var(--ghost);
   transition: background-color 0.3s ease;
 }
