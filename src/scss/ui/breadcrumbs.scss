@@ -2,12 +2,6 @@
 @use "../base/media" as *;
 
 .breadcrumbs {
-  margin: 10px 0px 25px 0px;
-
-  & + .sect-m {
-    margin-top: 0 !important;
-  }
-
   .aioseo-breadcrumbs {
     display: flex;
     gap: 8px;

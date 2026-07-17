@@ -1,5 +1,5 @@
-@use '../base/templates' as *;
-@use '../base/media' as *;
+@use "../base/templates" as *;
+@use "../base/media" as *;
 
 .s-title {
   margin: 0;
@@ -17,5 +17,16 @@
   }
   @include tablet {
     font-size: 28px;
+  }
+}
+.l-title {
+  font-weight: 500;
+  font-size: 28px;
+  margin: 0;
+  @include laptop-min {
+    font-size: 24px;
+  }
+  @include tablet {
+    font-size: 22px;
   }
 }

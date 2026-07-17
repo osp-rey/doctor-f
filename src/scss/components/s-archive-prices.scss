@@ -1,0 +1,35 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
+.s-archive-prices {
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 45px;
+    @include laptop-min {
+      gap: 30px;
+    }
+
+    [data-more-item]:nth-child(-n+3) {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  &__block-title {
+    margin-bottom: 30px;
+    @include laptop-min {
+      margin-bottom: 25px;
+    }
+  }
+  &__btn-more {
+    width: 300px;
+    margin: 45px auto 0px auto;
+    @include laptop-min {
+      margin-top: 30px;
+    }
+    @include tablet-min {
+      width: 100%;
+    }
+  }
+}

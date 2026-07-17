@@ -1,35 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-  @@include("components/head.html")
-</head>
-<body class="body">
+  <head>
+    @@include("components/head.html")
+  </head>
+  <body class="body">
+    @@include("components/header.html") @@include("components/burger.html")
+    @@include("components/modals.html")
 
-  @@include("components/header.html")
-  @@include("components/burger.html")
-  @@include("components/modals.html")
-  
-  <main>
-    <div class="breadcrumbs">
-      <div class="container">
-        <div class="aioseo-breadcrumbs">
-          <span class="aioseo-breadcrumb">
-            <a href="/">Главная</a>
-          </span>
-          <span class="aioseo-breadcrumb-separator">»</span>
-          <span class="aioseo-breadcrumb">
-            <a href="/">Услуги</a>
-          </span>
-          <span class="aioseo-breadcrumb-separator">»</span>
-          <span class="aioseo-breadcrumb">Консультации специалистов</span>
+    <main>
+      <div class="page-head">
+        <div class="container">
+          <div class="breadcrumbs">
+            <div class="aioseo-breadcrumbs">
+              <span class="aioseo-breadcrumb">
+                <a href="/">Главная</a>
+              </span>
+              <span class="aioseo-breadcrumb-separator">»</span>
+              <span class="aioseo-breadcrumb">
+                <a href="/">Услуги</a>
+              </span>
+              <span class="aioseo-breadcrumb-separator">»</span>
+              <span class="aioseo-breadcrumb">Консультации специалистов</span>
+            </div>
+          </div>
+          <h1 class="s-title page-head__title">Консультации специалистов</h1>
         </div>
       </div>
-    </div>
-    @@include("components/s-archive-services.html")
-  </main>
+      @@include("components/s-archive-services.html")
+    </main>
 
-  @@include("components/footer.html")
-  
-  <script src="./js/app.js?ver=@@versions.js"></script>
-</body>
+    @@include("components/footer.html")
+
+    <script src="./js/app.js?ver=@@versions.js"></script>
+  </body>
 </html>

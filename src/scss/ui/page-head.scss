@@ -1,0 +1,19 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.page-head {
+  margin: 10px 0px 45px 0px;
+  @include laptop-middle {
+    margin-bottom: 30px;
+  }
+  @include tablet {
+    margin-bottom: 25px;
+  }
+  & + .sect-m {
+    margin-top: 0 !important;
+  }
+
+  &__title {
+    margin-top: 10px;
+  }
+}

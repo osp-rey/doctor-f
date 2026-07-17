@@ -2,11 +2,6 @@
 @use "../base/media" as *;
 
 .s-intro {
-  &__container {
-    @include tablet-min {
-      padding: 0;
-    }
-  }
   &__wrap {
     position: relative;
   }

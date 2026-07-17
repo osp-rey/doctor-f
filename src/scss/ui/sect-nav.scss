@@ -4,54 +4,21 @@
 .sect-nav {
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+  user-select: none;
   margin-bottom: 45px;
-
-  @include desktop {
-    overflow: visible !important;
-  }
   @include laptop-min {
     margin-bottom: 35px;
-
-    &::after {
-      display: block;
-    }
   }
   @include tablet-min {
     margin-bottom: 25px;
-  }
-
-  &._end {
-    &::after {
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
-
-  &::after {
-    position: absolute;
-    display: none;
-    content: "";
-    right: -15px;
-    bottom: 0;
-    top: 0;
-    width: 40px;
-    background: linear-gradient(
-      270deg,
-      #fff 0%,
-      rgba(255, 255, 255, 0.8) 40%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    z-index: 10;
-
-    transition:
-      opacity 0.3s ease,
-      visibility 0.3s ease;
   }
 }
 .sect-nav-btn {
   box-sizing: border-box;
   cursor: pointer;
   font-size: 22px;
+  white-space: nowrap;
   padding-bottom: 10px;
   width: fit-content !important;
 
@@ -83,5 +50,71 @@
     background-color: var(--primary);
     z-index: 1;
     transition: right 0.3s ease;
+  }
+}
+.sect-nav-next {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+
+  .slider-arrow {
+    position: relative;
+    width: 48px !important;
+    height: 48px !important;
+
+    &.swiper-button-disabled {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      @media (min-width: 1025px) {
+        display: none;
+      }
+    }
+    @include laptop-min {
+      height: 36px !important;
+      width: 40px !important;
+      pointer-events: none;
+      border: none;
+      border-radius: 0;
+      background: linear-gradient(
+        270deg,
+        #fff 0%,
+        rgba(255, 255, 255, 0.8) 40%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      svg {
+        display: none;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      background: linear-gradient(
+        270deg,
+        #fff 0%,
+        rgba(255, 255, 255, 0.8) 40%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: translateX(-100%);
+      z-index: 10;
+
+      @include laptop-min {
+        display: none;
+      }
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
   }
 }

@@ -23,6 +23,8 @@
 @use "./ui/card-team";
 @use "./ui/breadcrumbs";
 @use "./ui/more-item";
+@use "./ui/prices-table";
+@use "./ui/page-head";
 
 @use "./components/header";
 @use "./components/service-drop";
@@ -44,5 +46,7 @@
 @use "./components/s-something";
 @use "./components/s-adv";
 @use "./components/s-archive-team";
+@use "./components/s-doctor";
+@use "./components/s-archive-prices";
 
 @use "./components/footer";

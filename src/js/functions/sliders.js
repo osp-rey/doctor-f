@@ -45,6 +45,9 @@ export default function sliders() {
         speed: 900,
         spaceBetween: 20,
         slidesPerView: "auto",
+        navigation: {
+          nextEl: ".sect-nav-next .slider-arrow._next"
+        },
         breakpoints: {
           1025: {
             spaceBetween: 50,
