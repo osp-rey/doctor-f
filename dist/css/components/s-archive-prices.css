@@ -1,0 +1,40 @@
+.s-archive-prices__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 45px;
+}
+
+.s-archive-prices__grid [data-more-item]:nth-child(-n+3) {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.s-archive-prices__block-title {
+  margin-bottom: 30px;
+}
+
+.s-archive-prices__btn-more {
+  width: 300px;
+  margin: 45px auto 0px auto;
+}
+
+@media (max-width: 1024px) {
+  .s-archive-prices__grid {
+    gap: 30px;
+  }
+
+  .s-archive-prices__block-title {
+    margin-bottom: 25px;
+  }
+
+  .s-archive-prices__btn-more {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .s-archive-prices__btn-more {
+    width: 100%;
+  }
+}

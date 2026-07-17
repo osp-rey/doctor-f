@@ -1,0 +1,26 @@
+.s-promo__slider .swiper-slide {
+  box-sizing: border-box;
+  height: auto !important;
+}
+
+.s-promo__slider .swiper-slide .card-promo {
+  height: 100%;
+}
+
+.s-promo__btn-more {
+  width: 350px;
+  max-width: 100%;
+  margin: 25px auto 0px auto;
+}
+
+@media (min-width: 1025px) {
+  .s-promo__btn-more {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .s-promo__btn-more {
+    width: 100%;
+  }
+}

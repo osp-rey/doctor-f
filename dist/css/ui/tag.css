@@ -1,0 +1,20 @@
+.tag {
+  padding: 10px 15px;
+  border-radius: 2px 14px 14px 14px;
+  background-color: var(--ghost);
+  width: fit-content;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--primary);
+}
+
+.tag._white {
+  background-color: white;
+}
+
+@media (max-width: 767px) {
+  .tag {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+}

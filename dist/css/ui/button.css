@@ -1,0 +1,155 @@
+.btn-s {
+  --background: var(--primary);
+  --background-h: var(--primary-h);
+  --color: white;
+  --color-h: white;
+  --border: var(--primary);
+  --border-h: var(--primary-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 12px 35px;
+  outline: none;
+  border-radius: 10px;
+  min-height: 68px;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  width: fit-content;
+  gap: 15px;
+  user-select: none;
+  text-align: center;
+  color: var(--color);
+  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-s .icon-play {
+  width: 40px;
+  height: 40px;
+}
+
+.btn-s .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-s._blur {
+  --background: rgba(0, 0, 0, 0.2);
+  --background-h: rgba(0, 0, 0, 0.4);
+  --color: white;
+  --color-h: white;
+  --border: transparent;
+  --border-h: transparent;
+  backdrop-filter: blur(15px);
+}
+
+.btn-s._white {
+  --background: white;
+  --background-h: var(--ghost);
+  --color: var(--black);
+  --color-h: var(--black);
+  --border: white;
+  --border-h: var(--ghost);
+}
+
+.btn-s._white svg {
+  color: var(--primary);
+}
+
+.btn-s._outline {
+  --background: transparent;
+  --background-h: var(--primary-h);
+  --color: var(--primary);
+  --color-h: white;
+  --border: var(--primary);
+  --border-h: var(--primary-h);
+}
+
+.btn-r {
+  --background: var(--primary);
+  --background-h: var(--primary-h);
+  --color: white;
+  --color-h: white;
+  --border: var(--primary);
+  --border-h: var(--primary-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  color: var(--color);
+  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-r svg {
+  width: 14px;
+  height: 14px;
+}
+
+.btn-simple {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--prmary);
+  text-underline-offset: 2px;
+  width: fit-content;
+  color: var(--primary);
+}
+
+@media (max-width: 1024px) {
+  .btn-s .icon-play {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .btn-s {
+    min-height: 52px;
+    border-radius: 6px;
+  }
+
+  .btn-s .icon-play {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (any-hover: hover) {
+  .btn-s:hover {
+    color: var(--color-h);
+    background-color: var(--background-h);
+    border-color: var(--border-h);
+  }
+
+  .btn-r:hover {
+    background-color: var(--background-h);
+    border-color: var(--border-h);
+    color: var(--color-h);
+  }
+
+  .btn-simple:hover {
+    text-decoration: none;
+  }
+}
+
+@media (hover: none) {
+  .btn-s:active {
+    color: var(--color-h);
+    background-color: var(--background-h);
+    border-color: var(--border-h);
+  }
+
+  .btn-r:active {
+    background-color: var(--background-h);
+    border-color: var(--border-h);
+    color: var(--color-h);
+  }
+
+  .btn-simple:active {
+    text-decoration: none;
+  }
+}

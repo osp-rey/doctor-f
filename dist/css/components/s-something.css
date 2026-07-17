@@ -1,0 +1,156 @@
+.s-something__wrap {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.s-something__tabs {
+  margin-top: 45px;
+}
+
+.s-something__tabs-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.s-something__tab-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 14px 25px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  font-size: 22px;
+  text-align: center;
+  user-select: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.s-something__tab-btn._active {
+  background: var(--primary);
+  border-color: var(--primary);
+  pointer-events: none;
+  color: white;
+}
+
+.s-something__info {
+  flex: 0 1 1100px;
+}
+
+.s-something__tab-content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.s-something__gallery {
+  position: sticky;
+  top: 80px;
+  width: 600px;
+  aspect-ratio: 1/1;
+  flex-shrink: 0;
+}
+
+.s-something__gallery-inside {
+  border-radius: 20px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.s-something__gallery-inside::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: rgba(197, 143, 103, 0.1);
+  z-index: -1;
+}
+
+.s-something__gallery-inside img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  z-index: -2;
+}
+
+@media (max-width: 1539px) {
+  .s-something__gallery {
+    width: 500px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .s-something__gallery {
+    width: 400px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .s-something__tabs {
+    margin-top: 25px;
+  }
+
+  .s-something__tab-btn {
+    font-size: 18px;
+  }
+
+  .s-something__gallery {
+    width: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+  .s-something__wrap {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .s-something__tabs-buttons {
+    margin-bottom: 15px;
+    gap: 10px;
+  }
+
+  .s-something__tab-btn {
+    padding: 12px 20px;
+    border-radius: 6px;
+  }
+
+  .s-something__info {
+    flex: auto;
+    width: 100%;
+  }
+
+  .s-something__gallery {
+    position: static;
+    width: 600px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (any-hover: hover) {
+  .s-something__tab-btn:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+  }
+}
+
+@media (hover: none) {
+  .s-something__tab-btn:active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+  }
+}

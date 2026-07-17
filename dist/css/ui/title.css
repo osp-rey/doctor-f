@@ -1,0 +1,41 @@
+.s-title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 48px;
+}
+
+.l-title {
+  font-weight: 500;
+  font-size: 28px;
+  margin: 0;
+}
+
+@media (max-width: 1365px) {
+  .s-title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .s-title {
+    font-size: 36px;
+  }
+
+  .l-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .s-title {
+    font-size: 32px;
+  }
+
+  .s-title {
+    font-size: 28px;
+  }
+
+  .l-title {
+    font-size: 22px;
+  }
+}

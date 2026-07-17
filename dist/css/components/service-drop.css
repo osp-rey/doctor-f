@@ -1,0 +1,118 @@
+.service-drop-overlay {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(15px);
+  background: rgba(68, 68, 68, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  z-index: 110;
+}
+
+.service-drop-overlay._open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.service-drop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  padding: 50px 0px;
+  background-color: white;
+  z-index: 120;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.service-drop._open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.service-drop__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.service-drop__item {
+  background-color: var(--ghost);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.service-drop__item-title {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.service-drop__item-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.service-drop__item-list a {
+  transition: color 0.3s ease;
+}
+
+.service-drop__item-more {
+  display: block;
+  width: fit-content;
+  margin-top: 10px;
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-size: 16px;
+}
+
+@media (max-width: 1365px) {
+  .service-drop {
+    padding: 30px 0px;
+  }
+
+  .service-drop__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1199px) {
+  .service-drop__item-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .service-drop-overlay {
+    display: none !important;
+  }
+
+  .service-drop {
+    display: none !important;
+  }
+}
+
+@media (any-hover: hover) {
+  .service-drop__item-list a:hover {
+    color: var(--primary);
+  }
+
+  .service-drop__item-more:hover {
+    text-decoration: none;
+  }
+}
+
+@media (hover: none) {
+  .service-drop__item-list a:active {
+    color: var(--primary);
+  }
+
+  .service-drop__item-more:active {
+    text-decoration: none;
+  }
+}

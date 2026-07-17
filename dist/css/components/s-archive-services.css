@@ -1,0 +1,45 @@
+.s-archive-services__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.s-archive-services__btn-more {
+  width: 300px;
+  max-width: 100%;
+  margin: 45px auto 0px auto;
+}
+
+@media (max-width: 1199px) {
+  .s-archive-services__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .s-archive-services__grid {
+    gap: 15px;
+  }
+
+  .s-archive-services__btn-more {
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .s-archive-services__grid {
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .s-archive-services__grid .card-service {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .s-archive-services__btn-more {
+    width: 100%;
+    margin-top: 25px;
+  }
+}

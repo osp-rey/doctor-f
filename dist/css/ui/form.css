@@ -1,0 +1,259 @@
+.form-control {
+  width: 100%;
+}
+
+.form-control .wpcf7-not-valid-tip {
+  display: none;
+}
+
+.input {
+  --border: white;
+  --background: white;
+  --color: var(--black);
+  --placeholder: var(--light);
+  --border-h: rgba(0, 0, 0, 0.3);
+  --background-h: white;
+  --color-h: var(--black);
+  --placeholder-h: var(--light);
+  --border-f: var(--black);
+  --background-f: white;
+  --color-f: var(--black);
+  --placeholder-f: var(--light);
+  --border-e: var(--red);
+  --background-e: white;
+  --color-e: var(--red);
+  --placeholder-e: var(--red);
+  width: 100%;
+  padding: 20px 35px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  min-height: 68px;
+  color: var(--color);
+  outline: none;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.input::placeholder {
+  color: var(--placeholder);
+  transition: color 0.3s ease;
+}
+
+.input:focus {
+  border-color: var(--border-f) !important;
+  background-color: var(--background-f) !important;
+  color: var(--color-f) !important;
+}
+
+.input:focus::placeholder {
+  color: var(--placeholder-f) !important;
+}
+
+.input.wpcf7-not-valid {
+  border-color: var(--border-e);
+  background-color: var(--background-e);
+  color: var(--color-e);
+}
+
+.input.wpcf7-not-valid::placeholder {
+  color: var(--placeholder-e);
+}
+
+.check-wrapper {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.check-wrapper input[type=checkbox] {
+  opacity: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.check-wrapper input[type=checkbox]:checked + .wpcf7-list-item-label::before {
+  background: var(--url) center/10px auto no-repeat;
+  background-color: var(--background-a);
+  border-color: var(--border-a);
+}
+
+.check-wrapper .wpcf7-not-valid .wpcf7-list-item-label {
+  --color: var(--red);
+  --color-h: var(--red);
+  --border: var(--red);
+}
+
+.check-wrapper .wpcf7-list-item-label {
+  --color: var(--black);
+  --color-h: var(--primary);
+  --border: var(--primary);
+  --background: transparent;
+  --url: url("../img/check-white.svg");
+  --border-a: var(--primary);
+  --background-a: var(--primary);
+  display: flex;
+  align-items: start;
+  cursor: pointer;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--color);
+}
+
+.check-wrapper .wpcf7-list-item-label::before {
+  content: "";
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.check-wrapper .wpcf7-list-item-label a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.3s ease;
+}
+
+.check-wrapper .wpcf7-list-item {
+  margin-left: 0;
+}
+
+.select {
+  position: relative;
+  width: 100%;
+}
+
+.select._open .select-btn .select-arrow {
+  transform: rotate(180deg);
+}
+
+.select._open .select-body {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.select-btn {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.select-btn .select-arrow {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 30px;
+  transition: transform 0.3s ease;
+}
+
+.select-input {
+  pointer-events: none;
+  padding-right: 60px;
+}
+
+.select-body {
+  position: absolute;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: auto;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.select-body-wrap {
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.select-body-wrap::-webkit-scrollbar {
+  width: 3px;
+}
+
+.select-body-wrap::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.select-body-wrap::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 10px;
+}
+
+.select-item {
+  width: 100%;
+  cursor: pointer;
+  padding: 12px 35px;
+  user-select: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.select-item._active {
+  pointer-events: none;
+  background-color: var(--ghost);
+}
+
+@media (max-width: 767px) {
+  .input {
+    min-height: 52px;
+    border-radius: 6px;
+    padding: 16px 28px;
+  }
+
+  .check-wrapper .wpcf7-list-item-label {
+    font-size: 12px;
+  }
+
+  .select-item {
+    padding: 12px 28px;
+  }
+}
+
+@media (any-hover: hover) {
+  .input:hover {
+    border-color: var(--border-h);
+    background-color: var(--background-h);
+    color: var(--color-h);
+  }
+
+  .input:hover::placeholder {
+    color: var(--placeholder-h);
+  }
+
+  .check-wrapper .wpcf7-list-item-label a:hover {
+    color: var(--color-h);
+  }
+
+  .select-item:hover {
+    background-color: var(--ghost);
+  }
+}
+
+@media (hover: none) {
+  .input:active {
+    border-color: var(--border-h);
+    background-color: var(--background-h);
+    color: var(--color-h);
+  }
+
+  .input:active::placeholder {
+    color: var(--placeholder-h);
+  }
+
+  .check-wrapper .wpcf7-list-item-label a:active {
+    color: var(--color-h);
+  }
+
+  .select-item:active {
+    background-color: var(--ghost);
+  }
+}

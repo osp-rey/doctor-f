@@ -1,0 +1,99 @@
+.s-requisites__item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.s-requisites__item .item-val {
+  color: var(--primary);
+}
+
+.s-requisites__item .item-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.s-requisites__item .btn-copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: var(--primary);
+  color: white;
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  margin-left: auto;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.s-requisites__item .btn-copy svg {
+  width: 20px;
+  height: 20px;
+}
+
+.s-requisites__btn-all {
+  margin: 45px auto 0px auto;
+}
+
+@media (max-width: 1024px) {
+  .s-requisites__wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .s-requisites__item .btn-copy {
+    opacity: 1;
+  }
+
+  .s-requisites__btn-all {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .s-requisites__item {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    background-color: transparent !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .s-requisites__btn-all {
+    width: 100%;
+  }
+}
+
+@media (any-hover: hover) {
+  .s-requisites__item:hover {
+    background-color: var(--ghost);
+  }
+
+  .s-requisites__item:hover .btn-copy {
+    opacity: 1;
+  }
+
+  .s-requisites__item .btn-copy:hover {
+    background-color: var(--primary-h);
+  }
+}
+
+@media (hover: none) {
+  .s-requisites__item:active {
+    background-color: var(--ghost);
+  }
+
+  .s-requisites__item:active .btn-copy {
+    opacity: 1;
+  }
+
+  .s-requisites__item .btn-copy:active {
+    background-color: var(--primary-h);
+  }
+}

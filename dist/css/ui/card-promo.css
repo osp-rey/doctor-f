@@ -1,0 +1,102 @@
+.card-promo {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-promo__gallery {
+  position: relative;
+  border-radius: 20px;
+  aspect-ratio: 1/0.75;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.card-promo__gallery::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: rgba(197, 143, 103, 0.3);
+  z-index: 1;
+}
+
+.card-promo__gallery img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-promo__title {
+  margin: 25px 0px 0px 0px;
+  font-weight: 600;
+  font-size: 22px;
+  width: fit-content;
+  transition: color 0.3s ease;
+}
+
+.card-promo__date {
+  font-size: 16px;
+  opacity: 0.7;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.card-promo__btn {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  width: fit-content;
+  margin-top: auto;
+}
+
+@media (max-width: 1199px) {
+  .card-promo__title {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .card-promo__gallery {
+    aspect-ratio: 1/1;
+  }
+}
+
+@media (max-width: 767px) {
+  .card-promo__title {
+    font-size: 18px;
+  }
+
+  .card-promo__date {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+
+  .card-promo__btn {
+    margin-top: 15px;
+  }
+}
+
+@media (any-hover: hover) {
+  .card-promo__title:hover {
+    color: var(--primary);
+  }
+
+  .card-promo__btn:hover {
+    text-decoration: none;
+  }
+}
+
+@media (hover: none) {
+  .card-promo__title:active {
+    color: var(--primary);
+  }
+
+  .card-promo__btn:active {
+    text-decoration: none;
+  }
+}

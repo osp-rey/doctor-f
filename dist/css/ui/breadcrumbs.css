@@ -1,0 +1,45 @@
+.breadcrumbs .aioseo-breadcrumbs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs .aioseo-breadcrumb {
+  --color: var(--primary);
+  --color-h: var(--primary-h);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--color);
+}
+
+.breadcrumbs .aioseo-breadcrumb:not(:last-child)::after {
+  content: "";
+  display: block;
+  flex-shrink: 0;
+  width: 4px;
+  height: 4px;
+  background-color: var(--color);
+  border-radius: 50%;
+}
+
+.breadcrumbs .aioseo-breadcrumb a {
+  transition: color 0.3s ease;
+}
+
+.breadcrumbs .aioseo-breadcrumb-separator {
+  display: none;
+}
+
+@media (any-hover: hover) {
+  .breadcrumbs .aioseo-breadcrumb a:hover {
+    color: var(--color-h);
+  }
+}
+
+@media (hover: none) {
+  .breadcrumbs .aioseo-breadcrumb a:active {
+    color: var(--color-h);
+  }
+}

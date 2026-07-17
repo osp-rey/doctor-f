@@ -1,0 +1,132 @@
+.s-contacts__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 45px;
+}
+
+.s-contacts__item .item-name {
+  font-size: 14px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.s-contacts__item .item-tel {
+  font-weight: 500;
+  font-size: 28px;
+  transition: color 0.3s ease;
+}
+
+.s-contacts__map-wrap {
+  position: relative;
+}
+
+.s-contacts__map {
+  width: 100%;
+  height: 700px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.s-contacts__info {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  border-radius: 20px;
+  padding: 30px;
+  background-color: white;
+  width: 630px;
+  max-width: 100%;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.s-contacts__address {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.s-contacts__btn-map {
+  flex-shrink: 0;
+}
+
+@media (max-width: 1365px) {
+  .s-contacts__item .item-tel {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .s-contacts__map {
+    height: 500px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .s-contacts__grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 30px;
+  }
+
+  .s-contacts__info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: static;
+    transform: translateX(0);
+    left: auto;
+    margin: 15px auto 0 auto;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .s-contacts__address {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .s-contacts__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .s-contacts__map {
+    border-radius: 12px;
+    height: 450px;
+  }
+
+  .s-contacts__info {
+    margin-top: 10px;
+    border-radius: 12px;
+  }
+
+  .s-contacts__address {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 575px) {
+  .s-contacts__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .s-contacts__btn-map {
+    width: 100%;
+  }
+}
+
+@media (any-hover: hover) {
+  .s-contacts__item .item-tel:hover {
+    color: var(--primary);
+  }
+}
+
+@media (hover: none) {
+  .s-contacts__item .item-tel:active {
+    color: var(--primary);
+  }
+}

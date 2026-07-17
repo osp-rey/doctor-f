@@ -1,0 +1,23 @@
+.page-head {
+  margin: 10px 0px 45px 0px;
+}
+
+.page-head + .sect-m {
+  margin-top: 0 !important;
+}
+
+.page-head__title {
+  margin-top: 10px;
+}
+
+@media (max-width: 1199px) {
+  .page-head {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-head {
+    margin-bottom: 25px;
+  }
+}

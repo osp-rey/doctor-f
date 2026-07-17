@@ -1,0 +1,67 @@
+.card-service {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 30px;
+  background-color: var(--ghost);
+  border: 1px solid var(--ghost);
+  min-height: 200px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.card-service__name {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.card-service__arrow {
+  width: 16px;
+  height: 16px;
+  margin-top: auto;
+  color: var(--primary);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 1199px) {
+  .card-service__name {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card-service {
+    border-radius: 12px;
+  }
+
+  .card-service__name {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 575px) {
+  .card-service {
+    min-height: 170px;
+  }
+}
+
+@media (any-hover: hover) {
+  .card-service:hover {
+    background-color: var(--cloud);
+    border-color: var(--primary);
+  }
+
+  .card-service:hover .card-service__arrow {
+    transform: rotate(45deg);
+  }
+}
+
+@media (hover: none) {
+  .card-service:active {
+    background-color: var(--cloud);
+    border-color: var(--primary);
+  }
+
+  .card-service:active .card-service__arrow {
+    transform: rotate(45deg);
+  }
+}

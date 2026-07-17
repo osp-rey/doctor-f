@@ -1,0 +1,26 @@
+.s-team__slider .swiper-slide {
+  box-sizing: border-box;
+  height: auto !important;
+}
+
+.s-team__slider .swiper-slide .card-team {
+  height: 100%;
+}
+
+.s-team__btn-more {
+  max-width: 100%;
+  width: 300px;
+  margin: 25px auto 0px auto;
+}
+
+@media (min-width: 1025px) {
+  .s-team__btn-more {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .s-team__btn-more {
+    width: 100%;
+  }
+}

@@ -1,0 +1,49 @@
+.content-box {
+  line-height: 150%;
+}
+
+.content-box > * {
+  margin: 0;
+}
+
+.content-box > *:not(:last-child) {
+  margin-bottom: 1.2rem;
+}
+
+.content-box a {
+  text-decoration: underline;
+  color: var(--primary);
+}
+
+.content-box ul {
+  padding: 0;
+  list-style: none;
+}
+
+.content-box ul li {
+  position: relative;
+  padding-left: 25px;
+}
+
+.content-box ul li::before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  background-color: var(--primary);
+  height: 8px;
+  width: 8px;
+  left: 8px;
+  top: 9px;
+}
+
+@media (any-hover: hover) {
+  .content-box a:hover {
+    text-decoration: none;
+  }
+}
+
+@media (hover: none) {
+  .content-box a:active {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,34 @@
+.body-hidden {
+  overflow: hidden;
+  touch-action: none;
+}
+
+.body {
+  font-family: "Involve";
+  font-size: 18px;
+  color: var(--black);
+}
+
+.body.error404 {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.body.error404 main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+@media (max-width: 1024px) {
+  .body {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .body {
+    font-size: 15px;
+  }
+}
