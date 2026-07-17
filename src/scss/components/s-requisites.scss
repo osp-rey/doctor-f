@@ -1,0 +1,78 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-requisites {
+  &__wrap {
+    @include laptop-min {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  }
+  &__item {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    transition: background-color 0.3s ease;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: 5px;
+      background-color: transparent !important;
+    }
+    @include hover {
+      background-color: var(--ghost);
+
+      .btn-copy {
+        opacity: 1;
+      }
+    }
+
+    .item-val {
+      color: var(--primary);
+    }
+    .item-row {
+      display: flex;
+      align-items: center;
+      gap: 15px
+    }
+    .btn-copy {
+      @include flex-center;
+      cursor: pointer;
+      background-color: var(--primary);
+      color: white;
+      opacity: 0;
+      width: 50px;
+      height: 50px;
+      flex-shrink: 0;
+      margin-left: auto;
+
+      transition:
+        background-color 0.3s ease,
+        opacity 0.3s ease;
+
+      @include laptop-min {
+        opacity: 1;
+      }
+      @include hover {
+        background-color: var(--primary-h);
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  &__btn-all {
+    margin: 45px auto 0px auto;
+
+    @include laptop-min {
+      margin-top: 30px;
+    }
+    @include tablet-min {
+      width: 100%;
+    }
+  }
+}

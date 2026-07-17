@@ -1,6 +1,7 @@
 import burger from "./functions/burger.js";
 import buttonsNote from "./functions/buttonsNote.js";
 import changeModaltitle from "./functions/changeModalTitle.js";
+import copy from "./functions/copy.js";
 import doctorBgHeight from "./functions/doctorBgHeight.js";
 import handlerSelect from "./functions/handlerSelect.js";
 import headerScroll from "./functions/headerScroll.js";
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   more();
   headerScroll();
   doctorBgHeight();
+  copy();
 
   Fancybox.bind("[data-fancybox]", {
     closeButton: false,

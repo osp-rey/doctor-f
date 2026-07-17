@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  @@include("components/head.html")
+</head>
+<body class="body error404">
+
+  @@include("components/header.html")
+  @@include("components/burger.html")
+  @@include("components/modals.html")
+  
+  <main>
+    <div class="page-head">
+      <div class="container">
+        <div class="breadcrumbs">
+          <div class="aioseo-breadcrumbs">
+            <span class="aioseo-breadcrumb">
+              <a href="/">Главная</a>
+            </span>
+            <span class="aioseo-breadcrumb-separator">»</span>
+            <span class="aioseo-breadcrumb">404</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include("components/s-notfound.html")
+  </main>
+
+  @@include("components/footer.html")
+  
+  <script src="./js/app.js?ver=@@versions.js"></script>
+</body>
+</html>

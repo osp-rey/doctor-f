@@ -46,7 +46,8 @@ export default function sliders() {
         spaceBetween: 20,
         slidesPerView: "auto",
         navigation: {
-          nextEl: ".sect-nav-next .slider-arrow._next"
+          nextEl: nav.querySelector(".slider-arrow._next"),
+          prevEl: nav.querySelector(".slider-arrow._prev"),
         },
         breakpoints: {
           1025: {
